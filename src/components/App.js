@@ -78,7 +78,9 @@ const App = () => {
     () =>
       async function () {
         try {
-          const res = await fetch("http://localhost:8000/questions");
+          const res = await fetch(
+            "https://api-react-quiz.onrender.com/questions"
+          );
           const data = await res.json();
           dispatch({ type: "dataReceived", payload: data });
         } catch (err) {
